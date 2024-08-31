@@ -759,7 +759,8 @@ a:focus {
 /* end contact section */
 
 /* Gallery Section Styles */
-.gallery_section {
+ /* Gallery Section Styles */
+ .gallery_section {
   padding: 50px 0;
   background-color: #f9f9f9;
 }
@@ -779,64 +780,35 @@ a:focus {
   margin-bottom: 30px;
 }
 
-.gallery_item img {
+.img_wrapper {
+  position: relative;
   width: 100%;
-  height: auto;
+  padding-top: 75%; /* 4:3 aspect ratio */
+  overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.img_wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: transform 0.3s ease;
 }
 
-.gallery_item img:hover {
+.img_wrapper img:hover {
   transform: scale(1.05);
 }
 
-/* Lightbox Overlay Styles */
-.lb-overlay {
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-.lb-image {
-  max-width: 90%;
-  max-height: 90%;
-}
-
-.lb-nav {
-  color: #fff;
-}
-
-.lb-prev,
-.lb-next {
-  font-size: 30px;
-}
-
-.lb-dataContainer {
-  padding: 20px;
-}
-
-.lb-dataContainer a {
-  color: #fff;
-}
-
-.lb-number {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.lb-caption {
-  color: #fff;
-  font-size: 14px;
-}
-
-/* Caption Styles */
 .caption {
   text-align: center;
-  font-weight: bold;
   margin-top: 10px;
-  color: #333;
-}
-/* end of the photo gallery section  */
+  font-size: 14px;
+  color: #555;
+}/* end of the photo gallery section  */
 .team_section .box {
   display: -webkit-box;
   display: -ms-flexbox;
